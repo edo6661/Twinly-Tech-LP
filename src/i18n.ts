@@ -1,5 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+
 const resources = {
   en: {
     translation: {
@@ -81,6 +82,58 @@ const resources = {
             category: "Web Development",
           },
         },
+      },
+      testimonials: {
+        title: "What They Say",
+        subtitle:
+          "Explore our clients' experiences. Scroll down to see their stories firsthand.",
+        items: [
+          {
+            name: "Budi Santoso",
+            role: "CEO TechCorp",
+            text: "Outstanding collaboration! The team is highly professional.",
+          },
+          {
+            name: "Siti Aminah",
+            role: "Product Manager",
+            text: "Our website design and performance improved drastically.",
+          },
+          {
+            name: "Reza Rahadian",
+            role: "Startup Founder",
+            text: "Very responsive and solution-oriented. Highly recommended!",
+          },
+          {
+            name: "Diana Putri",
+            role: "Marketing Head",
+            text: "Our sales conversion increased by 200% thanks to the new UI.",
+          },
+          {
+            name: "Ahmad Faisal",
+            role: "CTO DevIndo",
+            text: "Clean and easy-to-maintain code. Awesome!",
+          },
+          {
+            name: "Nadia Vega",
+            role: "Creative Director",
+            text: "The animations are buttery smooth and a feast for the eyes.",
+          },
+          {
+            name: "Kevin Wijaya",
+            role: "E-commerce Owner",
+            text: "Never disappoints. Always on time.",
+          },
+          {
+            name: "Linda Kusuma",
+            role: "Operations",
+            text: "Team communication is excellent and transparent.",
+          },
+          {
+            name: "Hendra Gunawan",
+            role: "Lead Engineer",
+            text: "The tech stack used is very up-to-date.",
+          },
+        ],
       },
     },
   },
@@ -165,13 +218,67 @@ const resources = {
           },
         },
       },
+      testimonials: {
+        title: "Apa Kata Mereka?",
+        subtitle:
+          "Jelajahi pengalaman klien kami. Scroll ke bawah untuk melihat cerita mereka secara langsung.",
+        items: [
+          {
+            name: "Budi Santoso",
+            role: "CEO TechCorp",
+            text: "Kerja sama yang luar biasa! Tim ini sangat profesional.",
+          },
+          {
+            name: "Siti Aminah",
+            role: "Product Manager",
+            text: "Desain dan performa website kami meningkat drastis.",
+          },
+          {
+            name: "Reza Rahadian",
+            role: "Startup Founder",
+            text: "Sangat responsif dan solutif. Highly recommended!",
+          },
+          {
+            name: "Diana Putri",
+            role: "Marketing Head",
+            text: "Konversi penjualan kami naik 200% berkat UI baru.",
+          },
+          {
+            name: "Ahmad Faisal",
+            role: "CTO DevIndo",
+            text: "Kode yang rapi dan mudah di-maintain. Keren!",
+          },
+          {
+            name: "Nadia Vega",
+            role: "Creative Director",
+            text: "Animasi yang dibuat sangat mulus dan memanjakan mata.",
+          },
+          {
+            name: "Kevin Wijaya",
+            role: "E-commerce Owner",
+            text: "Tidak pernah mengecewakan. Selalu on-time.",
+          },
+          {
+            name: "Linda Kusuma",
+            role: "Operations",
+            text: "Komunikasi timnya sangat baik dan transparan.",
+          },
+          {
+            name: "Hendra Gunawan",
+            role: "Lead Engineer",
+            text: "Stack teknologi yang dipakai sangat up-to-date.",
+          },
+        ],
+      },
     },
   },
 };
+
 i18n.use(initReactI18next).init({
   resources,
   lng: "en",
   fallbackLng: "en",
   interpolation: { escapeValue: false },
 });
+
 export default i18n;
