@@ -5,6 +5,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Services from './components/Services';
 import Testimonials from './components/Testimonials';
+import Faq from './components/Faq';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Services />
         <Projects />
         <Testimonials />
+        <Faq />
       </main>
 
       <footer className="py-8 text-center border-t border-border-subtle text-text-secondary relative overflow-hidden">

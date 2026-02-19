@@ -135,6 +135,33 @@ const resources = {
           },
         ],
       },
+      faq: {
+        title: "Frequently Asked Questions",
+        subtitle:
+          "Find answers to common questions about our services and process.",
+        items: [
+          {
+            question: "What services do you offer?",
+            answer:
+              "We specialize in end-to-end digital solutions, including Web Development, Mobile App Development, Custom Enterprise Software, and UI/UX Design.",
+          },
+          {
+            question: "How long does a typical project take?",
+            answer:
+              "Project timelines vary depending on complexity. A standard web application might take 4-8 weeks, while complex mobile apps or enterprise platforms can take 3-6 months. We provide detailed timelines during the scoping phase.",
+          },
+          {
+            question: "Do you provide post-launch support?",
+            answer:
+              "Yes, we offer ongoing maintenance and support packages to ensure your application remains secure, up-to-date, and performs optimally as your user base grows.",
+          },
+          {
+            question: "What is your development process?",
+            answer:
+              "Our process typically follows Agile methodologies: Discovery & Planning, UI/UX Design, Development (with regular sprint reviews), Testing/QA, Deployment, and Post-Launch Support.",
+          },
+        ],
+      },
     },
   },
   id: {
@@ -267,6 +294,33 @@ const resources = {
             name: "Hendra Gunawan",
             role: "Lead Engineer",
             text: "Stack teknologi yang dipakai sangat up-to-date.",
+          },
+        ],
+      },
+      faq: {
+        title: "Pertanyaan yang Sering Diajukan",
+        subtitle:
+          "Temukan jawaban untuk pertanyaan umum seputar layanan dan proses kami.",
+        items: [
+          {
+            question: "Layanan apa saja yang Anda tawarkan?",
+            answer:
+              "Kami fokus pada solusi digital dari hulu ke hilir, termasuk Pengembangan Web, Pengembangan Aplikasi Mobile, Perangkat Lunak Perusahaan Kustom, dan Desain UI/UX.",
+          },
+          {
+            question: "Berapa lama waktu yang dibutuhkan untuk sebuah proyek?",
+            answer:
+              "Waktu pengerjaan sangat bergantung pada kompleksitas. Aplikasi web standar biasanya memakan waktu 4-8 minggu, sementara aplikasi mobile kompleks atau platform enterprise bisa memakan waktu 3-6 bulan. Kami akan memberikan estimasi waktu yang detail saat fase perencanaan.",
+          },
+          {
+            question: "Apakah Anda menyediakan dukungan setelah peluncuran?",
+            answer:
+              "Ya, kami menawarkan paket pemeliharaan dan dukungan berkelanjutan untuk memastikan aplikasi Anda tetap aman, mutakhir, dan berkinerja optimal seiring bertambahnya pengguna.",
+          },
+          {
+            question: "Bagaimana proses pengembangan yang Anda lakukan?",
+            answer:
+              "Proses kami biasanya mengikuti metodologi Agile: Penemuan & Perencanaan, Desain UI/UX, Pengembangan (dengan tinjauan sprint rutin), Pengujian/QA, Peluncuran, dan Dukungan Pasca-Peluncuran.",
           },
         ],
       },
