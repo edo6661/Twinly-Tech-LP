@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import Partners from './components/Partners';
 import About from './components/About';
 import Projects from './components/Projects';
+import Services from './components/Services';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Hero />
         <Partners />
         <About />
+        <Services />
         <Projects />
       </main>
 

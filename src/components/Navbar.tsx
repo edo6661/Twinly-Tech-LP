@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Globe, ChevronDown, Menu, X, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -14,7 +14,7 @@ export default function Navbar() {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [hoveredIndex, setHoveredIndex] = useState<string | null>(null); // State untuk sliding pill
+  const [hoveredIndex, setHoveredIndex] = useState<string | null>(null);
 
   const [isDarkMode, setIsDarkMode] = useState(() => {
     if (typeof window !== 'undefined') {
@@ -78,13 +78,13 @@ export default function Navbar() {
   const currentLang = i18n.language || 'en';
 
   return (
-    // Wrapper luar yang posisinya tetap, tapi isinya yang berubah ukuran
+
     <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none p-4 transition-all duration-500">
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
-        // Saat discroll, ia mengecil jadi "pulau", saat di atas, ia merentang penuh. Pointer-events-auto wajib karena wrapper-nya pointer-events-none
+
         className={`pointer-events-auto transition-all duration-500 ease-in-out flex items-center justify-between
           ${isScrolled
             ? 'w-full max-w-5xl bg-brand-light/80 backdrop-blur-xl border border-border-subtle/50 shadow-xl rounded-full py-2 px-4 md:px-6'
@@ -227,7 +227,7 @@ export default function Navbar() {
                   onClick={(e) => {
                     e.preventDefault();
                     setIsMobileMenuOpen(false);
-                    // Add scroll logic logic here if needed, same as handleMobileNavClick
+
                   }}
                   className="text-xl font-heading font-medium text-brand-dark hover:text-accent-primary transition-colors cursor-pointer bg-accent-subtle/30 hover:bg-accent-subtle rounded-xl p-4"
                 >
