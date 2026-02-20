@@ -1,31 +1,24 @@
 import { useEffect, useState } from 'react';
-import { motion, useMotionValue, useSpring, useTransform, type Variants } from 'motion/react'; // Tambahkan Variants
+import { motion, useMotionValue, useSpring, useTransform, type Variants } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, Play, Sparkles, Code2, Cpu } from 'lucide-react';
 import mascotImg from '../assets/mascot/2.png';
-
 export default function Hero() {
   const { t, i18n } = useTranslation();
-
-  // === MOUSE PARALLAX SETUP ===
   const [isDesktop, setIsDesktop] = useState(true);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-
   const springConfig = { damping: 25, stiffness: 100, mass: 0.5 };
   const smoothX = useSpring(mouseX, springConfig);
   const smoothY = useSpring(mouseY, springConfig);
-
   const mascotX = useTransform(smoothX, [-500, 500], [15, -15]);
   const mascotY = useTransform(smoothY, [-500, 500], [15, -15]);
   const bgX = useTransform(smoothX, [-500, 500], [-25, 25]);
   const bgY = useTransform(smoothY, [-500, 500], [-25, 25]);
-
   useEffect(() => {
     const checkDesktop = () => setIsDesktop(window.innerWidth > 768);
     checkDesktop();
     window.addEventListener('resize', checkDesktop);
-
     const handleMouseMove = (e: MouseEvent) => {
       if (!isDesktop) return;
       const x = e.clientX - window.innerWidth / 2;
@@ -33,15 +26,12 @@ export default function Hero() {
       mouseX.set(x);
       mouseY.set(y);
     };
-
     window.addEventListener('mousemove', handleMouseMove);
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('resize', checkDesktop);
     };
   }, [isDesktop, mouseX, mouseY]);
-
-  // === FIX TYPESCRIPT ERROR DI SINI ===
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -49,24 +39,19 @@ export default function Hero() {
       transition: { staggerChildren: 0.1, delayChildren: 0.2 }
     }
   };
-
   const wordVariants: Variants = {
     hidden: { opacity: 0, y: 20, filter: 'blur(10px)' },
     visible: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.5, ease: 'easeOut' } }
   };
-
   return (
     <section className="relative pt-40 pb-(--section-padding-y) px-6 min-h-[90vh] flex flex-col justify-center items-center overflow-hidden">
-
       {/* Background Floating Ornaments (Parallax) */}
       <motion.div style={{ x: bgX, y: bgY }} className="absolute inset-0 z-0 pointer-events-none opacity-20 dark:opacity-10">
         <Sparkles className="absolute top-32 left-[10%] text-brand-dark w-12 h-12" />
         <Code2 className="absolute bottom-32 right-[5%] text-brand-dark w-16 h-16" />
         <Cpu className="absolute top-1/2 right-[45%] text-brand-dark w-10 h-10" />
       </motion.div>
-
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
-
         {/* === BAGIAN TEKS (KIRI) === */}
         <motion.div className="text-center md:text-left">
           <motion.h1
@@ -102,7 +87,6 @@ export default function Hero() {
               );
             })}
           </motion.h1>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -122,7 +106,6 @@ export default function Hero() {
               </span>
               <div className="absolute inset-0 bg-brand-blue/20 dark:bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out rounded-full" />
             </motion.button>
-
             <motion.button
               whileHover={{ scale: 1.05, backgroundColor: "var(--color-accent-subtle)" }}
               whileTap={{ scale: 0.95 }}
@@ -139,7 +122,6 @@ export default function Hero() {
             </motion.button>
           </motion.div>
         </motion.div>
-
         {/* === BAGIAN MASKOT & BINGKAI (KANAN) === */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -149,7 +131,6 @@ export default function Hero() {
           style={{ x: mascotX, y: mascotY }}
         >
           <div className="absolute bg-brand-blue rounded-full opacity-40 blur-[80px] w-62.5 h-62.5 md:w-100 md:h-100 animate-pulse"></div>
-
           <motion.div
             animate={{ y: [-15, 15, -15] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}

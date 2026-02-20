@@ -162,6 +162,23 @@ const resources = {
           },
         ],
       },
+      contact: {
+        title: "Get in Touch",
+        subtitle:
+          "Have a project in mind? Let's build something great together. Fill out the form below and we'll get back to you shortly.",
+        info: {
+          email: "Email Us",
+          phone: "Call Us",
+          location: "Visit Us",
+        },
+        form: {
+          name: "Your Name",
+          email: "Your Email",
+          message: "Your Message",
+          placeholder: "Tell us about your project...",
+          submit: "Send Message",
+        },
+      },
     },
   },
   id: {
@@ -323,6 +340,23 @@ const resources = {
               "Proses kami biasanya mengikuti metodologi Agile: Penemuan & Perencanaan, Desain UI/UX, Pengembangan (dengan tinjauan sprint rutin), Pengujian/QA, Peluncuran, dan Dukungan Pasca-Peluncuran.",
           },
         ],
+      },
+      contact: {
+        title: "Hubungi Kami",
+        subtitle:
+          "Punya ide proyek? Mari bangun sesuatu yang hebat bersama. Isi formulir di bawah ini dan kami akan segera menghubungi Anda.",
+        info: {
+          email: "Email Kami",
+          phone: "Telepon Kami",
+          location: "Kunjungi Kami",
+        },
+        form: {
+          name: "Nama Anda",
+          email: "Email Anda",
+          message: "Pesan Anda",
+          placeholder: "Ceritakan tentang proyek Anda...",
+          submit: "Kirim Pesan",
+        },
       },
     },
   },

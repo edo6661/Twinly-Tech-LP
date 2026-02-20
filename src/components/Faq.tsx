@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { ChevronDown } from 'lucide-react';
 
-// Tipe data untuk FAQ
+
 interface FaqItem {
   question: string;
   answer: string;
@@ -13,7 +13,7 @@ export default function Faq() {
   const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  // Mengambil array of objects dari i18n
+
   const faqs = t('faq.items', { returnObjects: true }) as FaqItem[];
 
   const toggleFaq = (index: number) => {

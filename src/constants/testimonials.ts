@@ -1,0 +1,77 @@
+export const TESTIMONIALS = [
+  {
+    id: 1,
+    name: "Budi Santoso",
+    role: "CEO TechCorp",
+    text: "Kerja sama yang luar biasa! Tim ini sangat profesional.",
+    img: "https://i.pravatar.cc/150?u=1",
+  },
+  {
+    id: 2,
+    name: "Siti Aminah",
+    role: "Product Manager",
+    text: "Desain dan performa website kami meningkat drastis.",
+    img: "https://i.pravatar.cc/150?u=2",
+  },
+  {
+    id: 3,
+    name: "Reza Rahadian",
+    role: "Startup Founder",
+    text: "Sangat responsif dan solutif. Highly recommended!",
+    img: "https://i.pravatar.cc/150?u=3",
+  },
+  {
+    id: 4,
+    name: "Diana Putri",
+    role: "Marketing Head",
+    text: "Konversi penjualan kami naik 200% berkat UI baru.",
+    img: "https://i.pravatar.cc/150?u=4",
+  },
+  {
+    id: 5,
+    name: "Ahmad Faisal",
+    role: "CTO DevIndo",
+    text: "Kode yang rapi dan mudah di-maintain. Keren!",
+    img: "https://i.pravatar.cc/150?u=5",
+  },
+  {
+    id: 6,
+    name: "Nadia Vega",
+    role: "Creative Director",
+    text: "Animasi yang dibuat sangat mulus dan memanjakan mata.",
+    img: "https://i.pravatar.cc/150?u=6",
+  },
+  {
+    id: 7,
+    name: "Kevin Wijaya",
+    role: "E-commerce Owner",
+    text: "Tidak pernah mengecewakan. Selalu on-time.",
+    img: "https://i.pravatar.cc/150?u=7",
+  },
+  {
+    id: 8,
+    name: "Linda Kusuma",
+    role: "Operations",
+    text: "Komunikasi timnya sangat baik dan transparan.",
+    img: "https://i.pravatar.cc/150?u=8",
+  },
+  {
+    id: 9,
+    name: "Hendra Gunawan",
+    role: "Lead Engineer",
+    text: "Stack teknologi yang dipakai sangat up-to-date.",
+    img: "https://i.pravatar.cc/150?u=9",
+  },
+];
+
+export const CARD_POSITIONS = [
+  { xStart: "-5vw", yStart: "-10vh", xEnd: "-120vw", yEnd: "-60vh" },
+  { xStart: "5vw", yStart: "-5vh", xEnd: "110vw", yEnd: "-40vh" },
+  { xStart: "-10vw", yStart: "0vh", xEnd: "-130vw", yEnd: "10vh" },
+  { xStart: "10vw", yStart: "5vh", xEnd: "120vw", yEnd: "20vh" },
+  { xStart: "-5vw", yStart: "10vh", xEnd: "-100vw", yEnd: "80vh" },
+  { xStart: "8vw", yStart: "12vh", xEnd: "115vw", yEnd: "70vh" },
+  { xStart: "-2vw", yStart: "-15vh", xEnd: "-80vw", yEnd: "-100vh" },
+  { xStart: "0vw", yStart: "15vh", xEnd: "60vw", yEnd: "110vh" },
+  { xStart: "12vw", yStart: "-12vh", xEnd: "140vw", yEnd: "-80vh" },
+];

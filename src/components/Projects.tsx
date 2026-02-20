@@ -272,7 +272,6 @@ export default function Projects() {
               const finalX = `calc(${pos.pct}% + ${pos.px}px)`;
               const projectColor = CARD_COLORS_PROJECT[(project.id - 1) % CARD_COLORS_PROJECT.length];
 
-              // Tentukan base key untuk i18n berdasarkan translationKey proyek
               const projectKey = `projects.items.${project.translationKey}`;
 
               return (
