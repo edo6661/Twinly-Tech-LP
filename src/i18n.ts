@@ -4,7 +4,14 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      nav: { about: "About Us", projects: "Projects" },
+      nav: {
+        about: "About Us",
+        services: "Services",
+        projects: "Projects",
+        testimonials: "Testimonials",
+        faq: "FAQ",
+        contact: "Contact Us",
+      },
       hero: {
         title: "Empowering businesses with scalable tech",
         subtitle:
@@ -183,7 +190,14 @@ const resources = {
   },
   id: {
     translation: {
-      nav: { about: "Tentang Kami", projects: "Proyek" },
+      nav: {
+        about: "Tentang Kami",
+        services: "Layanan",
+        projects: "Proyek",
+        testimonials: "Testimoni",
+        faq: "FAQ",
+        contact: "Hubungi Kami",
+      },
       hero: {
         title: "Memberdayakan bisnis dengan teknologi terukur",
         subtitle:

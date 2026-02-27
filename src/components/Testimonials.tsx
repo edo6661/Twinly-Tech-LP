@@ -36,7 +36,7 @@ export default function Testimonials() {
     offset: ['start start', 'end end'],
   });
   return (
-    <section ref={containerRef} className="relative h-[300vh] bg-brand-dark dark:bg-brand-light">
+    <section id='testimonials' ref={containerRef} className="relative h-[300vh] bg-brand-dark dark:bg-brand-light">
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 z-0 pointer-events-none opacity-20 dark:opacity-10">
           {[...Array(6)].map((_, i) => (

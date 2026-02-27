@@ -72,7 +72,11 @@ export default function Navbar() {
 
   const navLinks = [
     { id: '#about', label: t('nav.about') },
+    { id: '#services', label: t('nav.services') },
     { id: '#projects', label: t('nav.projects') },
+    { id: '#testimonials', label: t('nav.testimonials') },
+    { id: '#faq', label: t('nav.faq') },
+    { id: '#contact', label: t('nav.contact') },
   ];
 
   const currentLang = i18n.language || 'en';
@@ -92,28 +96,25 @@ export default function Navbar() {
           }
         `}
       >
-        {/* Logo */}
         <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="flex items-center gap-3 cursor-pointer"
         >
-          <img src={logo} alt="Twinlytech Logo" className={`rounded-full object-cover shadow-md transition-all ${isScrolled ? 'h-8 w-8' : 'h-10 w-10'}`} />
+          <img src={logo} alt="Twinlytech Logo" className={`lg:block hidden rounded-full object-cover shadow-md transition-all ${isScrolled ? 'h-8 w-8' : 'h-10 w-10'}`} />
           <span className={`font-heading font-bold text-brand-dark tracking-tight transition-all ${isScrolled ? 'text-lg' : 'text-xl md:text-2xl'}`}>Twinlytech</span>
         </motion.div>
 
         <div className="flex items-center gap-2 md:gap-4">
 
-          {/* Desktop Links - SLIDING PILL EFFECT */}
           <div className="hidden md:flex items-center text-brand-dark font-medium mr-2" onMouseLeave={() => setHoveredIndex(null)}>
             {navLinks.map((link) => (
               <a
                 key={`${link.id}-${i18n.language}`}
                 href={link.id}
                 onMouseEnter={() => setHoveredIndex(link.id)}
-                className="relative px-5 py-2 rounded-full transition-colors duration-300"
+                className="relative px-5 py-2 rounded-full transition-colors duration-300 text-xs"
               >
-                {/* Background Kapsul yang meluncur */}
                 {hoveredIndex === link.id && (
                   <motion.div
                     layoutId="navbar-indicator"
@@ -126,10 +127,8 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Controls */}
           <div className="flex items-center gap-1 md:gap-2 border-l border-border-subtle/30 pl-2 md:pl-4">
 
-            {/* Dark Mode Switcher */}
             <motion.button
               whileHover={{ rotate: 15, scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -151,7 +150,6 @@ export default function Navbar() {
               </AnimatePresence>
             </motion.button>
 
-            {/* Language Dropdown */}
             <div className="relative" ref={dropdownRef}>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -194,7 +192,6 @@ export default function Navbar() {
               </AnimatePresence>
             </div>
 
-            {/* Mobile Hamburger Button */}
             <button
               className="md:hidden flex items-center justify-center p-2 rounded-full text-brand-dark hover:bg-accent-subtle/80 transition-base"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -207,7 +204,6 @@ export default function Navbar() {
         </div>
       </motion.nav>
 
-      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -228,6 +224,10 @@ export default function Navbar() {
                     e.preventDefault();
                     setIsMobileMenuOpen(false);
 
+                    const targetElement = document.querySelector(link.id);
+                    if (targetElement) {
+                      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
                   }}
                   className="text-xl font-heading font-medium text-brand-dark hover:text-accent-primary transition-colors cursor-pointer bg-accent-subtle/30 hover:bg-accent-subtle rounded-xl p-4"
                 >
