@@ -114,7 +114,7 @@ export default function Services() {
               IT Strategy & Digital Transformation. Beralih ke ranah digital dan tingkatkan efisiensi operasional.
             </p>
           </motion.div>
-          <motion.div variants={itemVariants} className="bg-brand-white border border-border-subtle rounded-3xl6 lg:p-8 relative overflow-hidden group shadow-card hover:shadow-hover transition-all duration-300">
+          <motion.div variants={itemVariants} className="bg-brand-white border border-border-subtle rounded-3xl p-6 lg:p-8 relative overflow-hidden group shadow-card hover:shadow-hover transition-all duration-300">
             <div className="w-full h-24 mb-6 relative flex items-center justify-center">
               <div className="absolute inset-0 flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
                 <div className="w-24 h-24 border border-dashed border-border-subtle rounded-full animate-spin-slow" style={{ animationDuration: '10s' }} />
